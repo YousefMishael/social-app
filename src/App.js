@@ -38,7 +38,7 @@ class App extends React.Component {
   addComment = (comment, idx) => {
       let _posts = JSON.parse(JSON.stringify(this.state.posts));
 
-      let date = new Date().getMilliseconds();
+      let date = new Date();
 
       _posts[idx].comments = [..._posts[idx].comments, {
         value: comment,
