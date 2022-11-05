@@ -37,7 +37,11 @@ function PostComments(props) {
                             <hr className='w-100 comments-separator' />
                         }
                         <span className=''>{com?.value}</span>
-                        <span className='small mt-1 text-muted'>{typeof com?.date === 'number' ?  new Date(com?.date).toLocaleTimeString(): ''}</span>
+                        <span className='small mt-1 text-muted'>{typeof com?.date === 'string' ? 
+                        new Date(com?.date).toLocaleString()
+                        :
+                        com?.date.toLocaleString()
+                        }</span>
                     </div>
                 })
             }
