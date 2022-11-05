@@ -23,7 +23,7 @@ function Posts(props) {
             <span className={`btn ${props?.post?.like ? 'btn-primary' : 'btn-light'} ms-1`} onClick={addLike}>Like</span>
             <span className='btn btn-secondary ms-2' onClick={toggleComments}>Comments</span>
         </div>
-        <div className={`overflow-hidden ${!showComments? 'd-none' : 'd-inline'}`}>
+        <div className={`${!showComments? 'd-none' : 'd-inline'}`}>
             <PostComments postId={props.postId} />
         </div>
     </div>
