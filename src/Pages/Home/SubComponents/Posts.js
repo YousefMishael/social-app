@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { AppContext } from '../../../Utils/Utils';
 import PostComments from './PostDialog';
+import './Posts.scss';
 
 
 function Posts(props) {
@@ -29,7 +30,7 @@ function Posts(props) {
             <span className={`btn ${props?.post?.like ? 'btn-primary' : 'btn-light'} ms-1 w-25`} onClick={addLike}>Like</span>
             <span className='btn btn-secondary ms-2 w-25' onClick={toggleComments}>Comments</span>
         </div>
-        <div className={`${!showComments? 'd-none' : 'd-inline'}`}>
+        <div className={`comments ${!showComments? '' : 'active'}`}>
             <PostComments postId={props.postId} />
         </div>
     </div>

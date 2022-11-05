@@ -1,0 +1,19 @@
+
+.comments{
+    overflow: hidden;
+    .comments-wrapper{
+        transform-origin: top;
+        transform: translateY(-101%);
+        transition: ease-in 300ms;
+    }
+}
+
+.comments.active{
+    .comments-wrapper{
+        transform: translateY(0);
+    }
+}
+
+
+
+

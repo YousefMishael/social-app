@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import { AppContext } from '../../../Utils/Utils';
-import './PostsDialog.css'
 
 function PostComments(props) {
     const [comment, setComment] = useState('');
@@ -22,7 +21,7 @@ function PostComments(props) {
     }
 
   return (
-    <div>
+    <div className='comments-wrapper'>
         <div className='d-flex flex-column'>
             <form onSubmit={addComment}>
             <input className='my-3 form-control' placeholder='Add comment...' value={comment} onChange={onCommentChanged} />
