@@ -31,11 +31,8 @@ function PostComments(props) {
         <div className='d-flex flex-column'>
             {
                 appContext?.posts[props.postId]?.comments.map((com, idx) => {
-                    return <div className='d-flex flex-column' key={idx}>
-                        {
-                            idx === 0 ? '' : 
-                            <hr className='w-100 comments-separator' />
-                        }
+                    return <div className='d-flex flex-column shadow p-2 rounded my-2 bg-light' key={idx}>
+                        
                         <span className=''>{com?.value}</span>
                         <span className='small mt-1 text-muted'>{typeof com?.date === 'string' ? 
                         new Date(com?.date).toLocaleString()
